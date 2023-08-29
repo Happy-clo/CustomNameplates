@@ -17,7 +17,6 @@
 
 package net.momirealms.customnameplates.manager;
 
-import com.francobm.magicosmetics.api.MagicAPI;
 import net.momirealms.customnameplates.CustomNameplates;
 import net.momirealms.customnameplates.object.Function;
 import net.momirealms.customnameplates.object.SimpleChar;
@@ -27,6 +26,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class ImageManager extends Function {
@@ -57,6 +58,7 @@ public class ImageManager extends Function {
         }
         File[] image_config_files = img_file.listFiles(file -> file.getName().endsWith(".yml"));
         if (image_config_files == null) return;
+        Arrays.sort(image_config_files, Comparator.comparing(File::getName));
         for (File image_config_file : image_config_files) {
             char img = ConfigManager.start_char;
             ConfigManager.start_char = (char) (img + '\u0001');
