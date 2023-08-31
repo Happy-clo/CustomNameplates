@@ -34,7 +34,7 @@ dependencies {
     implementation ('net.kyori:adventure-platform-bukkit:4.3.0')
     implementation ('net.kyori:adventure-text-minimessage:4.14.0')
     implementation ('net.kyori:adventure-text-serializer-gson:4.14.0')
-    implementation ("org.bstats:bstats-bukkit:3.0.1")
+    implementation ("org.bstats:bstats-bukkit:3.0.2")
     implementation fileTree (dir:'libs',includes:['BiomeAPI.jar'])
 }
 
