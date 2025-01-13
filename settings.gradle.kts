@@ -1,7 +1,7 @@
 rootProject.name = "CustomNameplates"
-include("api")
-include("bungeecord")
-include("velocity")
-include("paper")
-include("common")
-include("universe")
+include(":api")
+include(":common")
+include(":backend")
+include(":platforms:bukkit")
+include(":platforms:bukkit:compatibility")
+//include(":platforms:sponge")
